@@ -1,0 +1,25 @@
+services:
+  wordpress:
+    build: .
+    ports: ["8082:80"]
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME:-store}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER:-store}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD:-change-me}
+    volumes: [wordpress_data:/var/www/html]
+    depends_on: { db: { condition: service_healthy } }
+  db:
+    image: mysql:8.4
+    environment:
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME:-store}
+      MYSQL_USER: ${WORDPRESS_DB_USER:-store}
+      MYSQL_PASSWORD: ${WORDPRESS_DB_PASSWORD:-change-me}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-change-root-password}
+    volumes: [mysql_data:/var/lib/mysql]
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+volumes: { wordpress_data: {}, mysql_data: {} }

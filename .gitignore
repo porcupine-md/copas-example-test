@@ -1,0 +1,50 @@
+# Secrets and machine-specific configuration
+**/.env
+**/.env.*
+!**/.env.example
+!**/.env.*.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.cer
+secrets/
+
+# Dependencies and build output
+**/node_modules/
+**/.next/
+**/.astro/
+**/dist/
+**/build/
+**/vendor/
+**/target/
+
+# Python
+**/.venv/
+**/__pycache__/
+**/*.py[cod]
+
+# PHP/Laravel runtime state
+**/storage/*.key
+**/storage/logs/
+**/bootstrap/cache/*.php
+**/.phpunit.cache/
+**/.phpunit.result.cache
+
+# Local databases, app sessions, and generated auth state
+**/*.sqlite
+**/*.sqlite3
+**/*.sqlite-*
+**/auth/
+**/.sessions/
+
+# Tooling and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.zed/
+.fleet/
+*.log
+coverage/

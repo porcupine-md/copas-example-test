@@ -1,0 +1,9 @@
+:root { background: #fff8f2; color: #26140b; font-family: ui-rounded, "Avenir Next", "Trebuchet MS", sans-serif; }
+* { box-sizing: border-box; }
+body { min-height: 100vh; margin: 0; display: grid; place-items: center; padding: 1.5rem; }
+main { width: min(50rem, 100%); border: 2px solid #26140b; padding: clamp(2rem, 8vw, 5rem); background: #fffdf9; box-shadow: 12px 12px 0 #ff6b35; }
+.eyebrow { margin: 0 0 3rem; color: #c83d14; font-size: .75rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+h1 { max-width: 9ch; margin: 0; font-size: clamp(3.2rem, 12vw, 6.5rem); line-height: .86; letter-spacing: -.07em; }
+.intro { max-width: 35rem; margin: 2rem 0 3rem; font-size: clamp(1rem, 2vw, 1.2rem); line-height: 1.55; }
+dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin: 0; }
+dl div { padding-top: .8rem; border-top: 2px solid #26140b; } dt { color: #c83d14; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; } dd { margin: .35rem 0 0; font-weight: 700; } @media (max-width: 36rem) { dl { grid-template-columns: 1fr; } }

@@ -1,0 +1,2 @@
+import {createRoot} from 'react-dom/client'; import {useEffect,useState} from 'react'; import './style.css';
+function App(){const [data,setData]=useState();useEffect(()=>{fetch('/api/brief').then(r=>r.json()).then(setData)},[]);return <main><p>FASTAPI × REACT</p><h1>One clean handoff.</h1><section>{data ? <><b>{data.name}</b><span>{data.message}</span></> : 'Loading API…'}</section></main>} createRoot(document.getElementById('root')).render(<App/>);

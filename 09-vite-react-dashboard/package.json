@@ -1,0 +1,9 @@
+{
+  "name": "agency-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {"dev": "vite --host 0.0.0.0", "build": "vite build", "start": "vite preview --host 0.0.0.0 --port ${PORT:-4173}"},
+  "dependencies": {"@vitejs/plugin-react": "^5.0.4", "vite": "^7.1.7", "react": "^19.1.1", "react-dom": "^19.1.1"},
+  "devDependencies": {}
+}
