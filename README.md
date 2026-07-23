@@ -1,6 +1,6 @@
 # Copas deploy examples
 
-Enam belas proyek kecil dan independen untuk memeriksa jalur deployment Copas. Deploy satu direktori dalam satu waktu. Contoh **non-Docker** dipisahkan dari contoh **Docker** agar cocok untuk kebutuhan vibecoder maupun handoff agency.
+Enam belas proyek kecil dan independen untuk memeriksa deployment copas.sh. Deploy satu direktori dalam satu waktu. Contoh **non-Docker** dipisahkan dari contoh **Docker** agar cocok untuk kebutuhan vibecoder maupun software project apapun.
 
 | Example | Runtime | Mode | Use case | Health check |
 | --- | --- | --- | --- | --- |
